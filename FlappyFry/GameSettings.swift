@@ -26,9 +26,9 @@ struct GameSettings {
     /// Высота грунта.
     let groundHeight: Double
     /// Размер представления птицы.
-    let birdSize: Double
+    let headSize: Double
     /// Реальный радиус птицы.
-    let birdRadius: Double
+    let headRadius: Double
 
     /// Возвращает экземпляр `GameSettings` с настройками по умолчанию.
     static var defaultSettings: GameSettings {
@@ -41,8 +41,8 @@ struct GameSettings {
             jumpVelocity: -400,    // Сила прыжка птицы по умолчанию
             gravity: 1000,         // Сила гравитации по умолчанию
             groundHeight: 100,     // Высота грунта по умолчанию
-            birdSize: 80,          // Размер представления птицы по умолчанию
-            birdRadius: 13         // Радиус птицы по умолчанию
+            headSize: 80,          // Размер представления птицы по умолчанию
+            headRadius: 13         // Радиус птицы по умолчанию
         )
     }
 }
