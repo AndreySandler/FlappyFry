@@ -8,11 +8,35 @@
 import SwiftUI
 
 struct PipesView: View {
+    let topPipeHeight: Double
+    let pipeWidth: Double
+    let pipeSpacing: Double
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        // MARK: - Upper Pipe
+        GeometryReader { geometry in
+            VStack {
+                Image(.pipe)
+                    .resizable()
+                    .rotationEffect(.degrees(180))
+                    .frame(width: pipeWidth, height: topPipeHeight)
+                
+                // MARK: - Spacer
+                Spacer(minLength: pipeSpacing)
+                
+                // MARK: - Down Pipe
+                Image(.pipe)
+                    .resizable()
+                    .frame(
+                        width: pipeWidth,
+                        height: geometry.size.height - topPipeHeight - pipeSpacing
+                    )
+            }
+        }
     }
 }
 
 #Preview {
-    PipesView()
+    PipesView(topPipeHeight: 300, pipeWidth: 100, pipeSpacing: 100)
 }
