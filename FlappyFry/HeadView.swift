@@ -15,8 +15,6 @@ struct HeadView: View {
             .resizable()
             .scaledToFit()
             .frame(width: headSize, height: headSize)
-        
-            .border(Color.red, width: 2)
     }
 }
 

@@ -32,8 +32,6 @@ struct PipesView: View {
                         width: pipeWidth,
                         height: geometry.size.height - topPipeHeight - pipeSpacing
                     )
-                
-                    .border(Color.red, width: 2)
             }
         }
     }
